@@ -1,4 +1,4 @@
 dependencies:
   - name: mq-spring-app
-    version: 0.0.3
+    version: 0.0.4
     repository: https://artifactory-tools.ibmcloud-roks-9f0zmqmp-6ccd7f378ae819553d37d5f2ee142bd6-0000.ca-tor.containers.appdomain.cloud/artifactory/generic-local/cntk-acme-gitops-demo
