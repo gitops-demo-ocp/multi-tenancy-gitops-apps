@@ -8,6 +8,7 @@ spec:
   params:
     - name: git-url
       description: The url for the git repository
+      default: "https://github.com/cntk-acme-gitops-demo/mq-infra"
     - name: git-revision
       description: The git revision (branch, tag, or sha) that should be built
       default: master
@@ -29,6 +30,9 @@ spec:
     - name: git-pr
       description: Enable the pipeline to do a PR for the gitops repo
       default: "false"
+    - name: image-release
+      description: External registry
+      default: "quay.io/cntk-acme-gitops-demo"
   tasks:
     - name: setup
       taskRef:
@@ -40,6 +44,8 @@ spec:
           value: $(params.git-revision)
         - name: scan-image
           value: $(params.scan-image)
+        - name: image-release
+          value: $(params.image-release)
     - name: build
       taskRef:
         name: ibm-build-tag-push-v2-6-13
