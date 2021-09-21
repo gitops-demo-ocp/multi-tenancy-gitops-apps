@@ -4,7 +4,7 @@ mq-spring-app:
 
 argocd-hook-job:
   name: promote-dev-stage-trigger
-  namespace: ci
+  namespace: dev
   hook:
     enabled: true
     hooktype: PostSync
